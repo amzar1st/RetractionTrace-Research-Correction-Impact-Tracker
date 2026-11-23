@@ -1,0 +1,2 @@
+export const CONFIG={name:'RetractionTrace',network:'Studionet',chainId:61999,address:'0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d',rpc:'https://studio.genlayer.com/api',explorer:'https://explorer-studio.genlayer.com',studio:'https://studio.genlayer.com/contracts',repository:'https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker',demoReport:'LANGUAGE_REVIEW_V1',demoNotice:'QAB_CORRECTION_2018'};
+export const studioUrl=()=>CONFIG.address?'https://studio.genlayer.com/contracts?import-contract='+CONFIG.address:CONFIG.studio;

@@ -1,0 +1,4 @@
+import {client} from '../src/chain.js';import {CONFIG} from '../src/config.js';import fs from 'node:fs';
+const hash=process.argv[2];
+if(hash){const tx=await client.getTransaction({hash});fs.writeFileSync('/tmp/rt-last-tx.json',JSON.stringify(tx,null,2));console.log(JSON.stringify({hash:tx.hash,status:tx.statusName,execution:tx.txExecutionResultName,mode:tx.execution_mode,votes:tx.last_round?.validator_votes_name},null,2));}
+else{for(const [name,args] of [['list_reports',[]],['get_report',[CONFIG.demoReport]],['get_notice',[CONFIG.demoReport,CONFIG.demoNotice]],['get_assessment',[CONFIG.demoReport,CONFIG.demoNotice]]]){try{console.log(name,await client.readContract({address:CONFIG.address,functionName:name,args,transactionHashVariant:'latest-final'}))}catch(e){console.error(name,e.shortMessage||e.message)}}}

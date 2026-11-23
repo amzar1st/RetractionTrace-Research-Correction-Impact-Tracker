@@ -1,0 +1,150 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "assess_impact": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "notice_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "get_assessment": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "notice_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_claim_status": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_notice": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "notice_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_report": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "link_claim_sources": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "links_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "list_reports": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "register_report": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "report_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "submit_notice": {
+      "params": [
+        [
+          "report_id",
+          "string"
+        ],
+        [
+          "notice_id",
+          "string"
+        ],
+        [
+          "source_id",
+          "string"
+        ],
+        [
+          "notice_doi",
+          "string"
+        ],
+        [
+          "kind",
+          "string"
+        ],
+        [
+          "exact_excerpt",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    }
+  }
+}

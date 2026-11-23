@@ -1,0 +1,133 @@
+{
+  "project": "RetractionTrace",
+  "network": "Studionet",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "contract": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+  "contractExplorer": "https://explorer-studio.genlayer.com/address/0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+  "website": "https://retractiontrace.wirymink515.chatgpt.site",
+  "verifiedAt": "2026-11-23T14:55:39.508Z",
+  "sourceSha256": "db2e06c8f6c3558d3139ecd8e9585ce62e0f52e31ea5f370f62af66c8cc37708",
+  "reportId": "LANGUAGE_REVIEW_V1",
+  "noticeId": "QAB_CORRECTION_2018",
+  "reportHash": "0c7f72d0c61681e8dfde96895bc1709c36a2162de70e0a2c3bc3f47e9910ec26",
+  "noticeHash": "71d448e31584e432aa0d0857f4b98122b3995d613bec11536619975535fced41",
+  "assessmentHash": "9f65c42829ac3d5f716008264445fb788b0baa30b84e729a6f9bf654bcdc7d0b",
+  "checks": {
+    "deployedSourceMatches": true,
+    "officialNoticeVerified": true,
+    "allFiveExpectedStatusesMatch": true,
+    "citationsGrounded": true,
+    "unverifiablePassageRejected": true,
+    "transactionEffectsVerified": true,
+    "allTransactionsFinalized": true,
+    "normalConsensusMode": true,
+    "duplicateAssessmentRejected": true,
+    "failedAttemptPreservedAssessment": true
+  },
+  "transactions": [
+    {
+      "method": "deploy",
+      "hash": "0x18688a042be78a30286cf900d244a8b10f5e0d799e96697b98f069d517760220",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "mode": "NORMAL",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ],
+      "url": "https://explorer-studio.genlayer.com/transactions/0x18688a042be78a30286cf900d244a8b10f5e0d799e96697b98f069d517760220"
+    },
+    {
+      "method": "register_report",
+      "hash": "0x8ab2552f9e7571fbec701b0f53ca4e1b4b0758c7cf312ceca43cdb02f473b5ec",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "mode": "NORMAL",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ],
+      "url": "https://explorer-studio.genlayer.com/transactions/0x8ab2552f9e7571fbec701b0f53ca4e1b4b0758c7cf312ceca43cdb02f473b5ec"
+    },
+    {
+      "method": "link_claim_sources",
+      "hash": "0xd1f01eaa60317fa22f8473a5d9994aae00a6a0bd8fd2d71225e3c878a8953ba5",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "mode": "NORMAL",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ],
+      "url": "https://explorer-studio.genlayer.com/transactions/0xd1f01eaa60317fa22f8473a5d9994aae00a6a0bd8fd2d71225e3c878a8953ba5"
+    },
+    {
+      "method": "submit_notice",
+      "hash": "0x9bec90564fe8f114cc6b9e37619d6b3f64a21ab0447895c8137b8ecfe113e4d4",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "mode": "NORMAL",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ],
+      "url": "https://explorer-studio.genlayer.com/transactions/0x9bec90564fe8f114cc6b9e37619d6b3f64a21ab0447895c8137b8ecfe113e4d4"
+    },
+    {
+      "method": "assess_impact",
+      "hash": "0xc33d59d3645f78ebe7aaf0e15b1f8f90f2651190759c76b22a842b10932a1ef8",
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_RETURN",
+      "mode": "NORMAL",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "url": "https://explorer-studio.genlayer.com/transactions/0xc33d59d3645f78ebe7aaf0e15b1f8f90f2651190759c76b22a842b10932a1ef8"
+    },
+    {
+      "method": "assess_impact_duplicate_rejection",
+      "hash": "0xb6f219cd26d43f39caacdedd8bfd933f6aa8c627901d6c1c267837d6801ee25f",
+      "expectedFailure": true,
+      "status": "FINALIZED",
+      "execution": "FINISHED_WITH_ERROR",
+      "mode": "NORMAL",
+      "from": "0xd410A16A05022918E5F8FBC0f4aCBA41AD86F00C",
+      "to": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ],
+      "url": "https://explorer-studio.genlayer.com/transactions/0xb6f219cd26d43f39caacdedd8bfd933f6aa8c627901d6c1c267837d6801ee25f"
+    }
+  ]
+}

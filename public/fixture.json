@@ -1,0 +1,127 @@
+{
+  "report_id": "LANGUAGE_REVIEW_V1",
+  "report": {
+    "title": "Language assessment evidence review",
+    "version": "1.0",
+    "description": "Demonstration research report. Claims are illustrative audit inputs, not clinical guidance. The PLOS correction and cited publications are real. C5 intentionally includes an unverifiable excerpt to test missing evidence.",
+    "claims": [
+      {
+        "id": "C1",
+        "text": "The original QAB S1 scoring macro computes all summary measures correctly and can be reused unchanged."
+      },
+      {
+        "id": "C2",
+        "text": "The QAB study reported test-retest reliability based on 16 individuals with chronic aphasia."
+      },
+      {
+        "id": "C3",
+        "text": "The QAB produces eight summary measures ranging from 0 to 10."
+      },
+      {
+        "id": "C4",
+        "text": "The Russian Aphasia Test uses a tablet application to score comprehension subtests automatically."
+      },
+      {
+        "id": "C5",
+        "text": "The original QAB macro contains a capacity calculation of 160 mAh/g."
+      }
+    ],
+    "sources": [
+      {
+        "id": "QAB",
+        "doi": "10.1371/journal.pone.0192773",
+        "title": "A quick aphasia battery for efficient, reliable, and multidimensional assessment of language function",
+        "version": "Publisher JATS retrieved 2026-11-23; excerpt snapshot",
+        "passages": [
+          {
+            "id": "MACRO",
+            "text": "From the eight subtests of the QAB, eight summary measures are derived: (1) Word comprehension; (2) Sentence comprehension; (3) Word finding; (4) Grammatical construction; (5) Speech motor programming; (6) Repetition; (7) Reading; and (8) QAB overall. Each summary measure ranges from 0 (impaired) to 10 (unimpaired). Table 1 shows how each summary measure is calculated. A Macro is provided to calculate summary measures (S1 Macro)."
+          },
+          {
+            "id": "RELIABILITY",
+            "text": "Test-retest reliability was calculated based on the 16 individuals with chronic aphasia who were evaluated three times each on three separate occasions. Each summary measure was averaged across the two raters. The ICCs (type A-1) for each of the eight summary measures are presented in Fig 11B. Six of the measures had excellent test-retest reliability, ranging from 0.90 (repetition) to 0.98 (speech motor programming and QAB overall). The reliability of the two comprehension measures was good, not excellent: 0.73 for word comprehension and 0.72 for sentence comprehension. These somewhat lower ICCs reflect the limitation of small numbers of items in forced choice contexts."
+          },
+          {
+            "id": "MISSING",
+            "text": "The original macro uses the expression capacity = 160 mAh/g."
+          }
+        ]
+      },
+      {
+        "id": "RAT",
+        "doi": "10.1371/journal.pone.0258946",
+        "title": "The Russian Aphasia Test: The first comprehensive, quantitative, standardized, and computerized aphasia language battery in Russian",
+        "version": "Publisher JATS retrieved 2026-11-23; excerpt snapshot",
+        "passages": [
+          {
+            "id": "AUTOMATION",
+            "text": "We created a custom Android-based tablet application for automatic stimuli presentation and response registration for all RAT subtests. The application was developed using Java SE 8 programming language and can be installed on touch-screen tablets running an Android OS (4.2 and higher). Performance on the comprehension subtests (selection of a visual stimulus matching the auditory stimulus or selection of a yes/no response) is registered and scored automatically by the application. Reaction times are also registered for comprehension subtests; however, they were not analyzed within the present study and are not currently used for diagnostic purposes. Response accuracy and reaction time for each trial for comprehension subtests can be downloaded as.csv files for subsequent analysis. Oral responses to repetition and oral production subtests are recorded automatically for each trial separately and can be downloaded as .3gp files and analyzed manually."
+          }
+        ]
+      },
+      {
+        "id": "REVIEW",
+        "doi": "10.1371/journal.pone.0194143",
+        "title": "Diagnosis of aphasia in stroke populations: A systematic review of language tests",
+        "version": "Publisher JATS retrieved 2026-11-23; excerpt snapshot",
+        "passages": [
+          {
+            "id": "METHOD",
+            "text": "A wide range of language tests are currently used in post-stroke care [15]. Stroke scales such as the European Stroke Scale (ESS) [16], Canadian Neurological Scale (CNS) [17] and National Institutes of Health Stroke Scale (NIHSS) [18] gauge acute stroke severity and include subtest items which evaluate acute language functioning. These measures are used to inform hyperacute stroke treatment decision making and while they are often used to identify stroke patients with aphasia, they have not been specifically validated for this purpose [4] and do not assist with diagnostically differentiating between aphasic and non-aphasic stroke populations."
+          }
+        ]
+      }
+    ]
+  },
+  "links": [
+    {
+      "claim_id": "C1",
+      "source_id": "QAB",
+      "passage_ids": [
+        "MACRO"
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "source_id": "QAB",
+      "passage_ids": [
+        "RELIABILITY"
+      ]
+    },
+    {
+      "claim_id": "C3",
+      "source_id": "QAB",
+      "passage_ids": [
+        "MACRO"
+      ]
+    },
+    {
+      "claim_id": "C4",
+      "source_id": "RAT",
+      "passage_ids": [
+        "AUTOMATION"
+      ]
+    },
+    {
+      "claim_id": "C5",
+      "source_id": "QAB",
+      "passage_ids": [
+        "MISSING"
+      ]
+    }
+  ],
+  "notice": {
+    "notice_id": "QAB_CORRECTION_2018",
+    "source_id": "QAB",
+    "doi": "10.1371/journal.pone.0199469",
+    "kind": "CORRECTION",
+    "excerpt": "The macro included in the Supporting Information file, S1 Macro, contains several errors that will result in incorrect computations of summary measures. The macro containing the errors was not used in data analysis for the article, and the article\u2019s content is unaffected by these errors. Please see a corrected version of the macro here."
+  },
+  "expected": [
+    "REVIEW_REQUIRED",
+    "UNAFFECTED",
+    "UNAFFECTED",
+    "UNAFFECTED",
+    "INSUFFICIENT_EVIDENCE"
+  ]
+}
