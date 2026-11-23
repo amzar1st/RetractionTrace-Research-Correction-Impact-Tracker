@@ -38,12 +38,12 @@ All four write methods and deployment finalized successfully in NORMAL consensus
 
 | Operation | Execution result | Evidence |
 | --- | --- | --- |
-| deploy | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/transactions/0x18688a042be78a30286cf900d244a8b10f5e0d799e96697b98f069d517760220) |
-| register_report | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/transactions/0x8ab2552f9e7571fbec701b0f53ca4e1b4b0758c7cf312ceca43cdb02f473b5ec) |
-| link_claim_sources | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/transactions/0xd1f01eaa60317fa22f8473a5d9994aae00a6a0bd8fd2d71225e3c878a8953ba5) |
-| submit_notice | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/transactions/0x9bec90564fe8f114cc6b9e37619d6b3f64a21ab0447895c8137b8ecfe113e4d4) |
-| assess_impact | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/transactions/0xc33d59d3645f78ebe7aaf0e15b1f8f90f2651190759c76b22a842b10932a1ef8) |
-| assess_impact_duplicate_rejection | FINISHED_WITH_ERROR | [Transaction](https://explorer-studio.genlayer.com/transactions/0xb6f219cd26d43f39caacdedd8bfd933f6aa8c627901d6c1c267837d6801ee25f) |
+| deploy | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/tx/0x18688a042be78a30286cf900d244a8b10f5e0d799e96697b98f069d517760220) |
+| register_report | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/tx/0x8ab2552f9e7571fbec701b0f53ca4e1b4b0758c7cf312ceca43cdb02f473b5ec) |
+| link_claim_sources | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/tx/0xd1f01eaa60317fa22f8473a5d9994aae00a6a0bd8fd2d71225e3c878a8953ba5) |
+| submit_notice | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/tx/0x9bec90564fe8f114cc6b9e37619d6b3f64a21ab0447895c8137b8ecfe113e4d4) |
+| assess_impact | FINISHED_WITH_RETURN | [Transaction](https://explorer-studio.genlayer.com/tx/0xc33d59d3645f78ebe7aaf0e15b1f8f90f2651190759c76b22a842b10932a1ef8) |
+| assess_impact_duplicate_rejection | FINISHED_WITH_ERROR | [Transaction](https://explorer-studio.genlayer.com/tx/0xb6f219cd26d43f39caacdedd8bfd933f6aa8c627901d6c1c267837d6801ee25f) |
 
 ## Evidence commitments
 
