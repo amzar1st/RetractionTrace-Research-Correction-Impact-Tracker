@@ -1,6 +1,6 @@
 {
   "project": "RetractionTrace",
-  "implementationCommit": "e8bf7b817f8a7d21c11b481c58da4d078f9bed27",
+  "implementationCommit": "f4146d3f9cf531f4772161bca73b761367ac8751",
   "deployedSourceSha256": "db2e06c8f6c3558d3139ecd8e9585ce62e0f52e31ea5f370f62af66c8cc37708",
   "contract": "0xCf5d49Ac30E8cc703683F38e0De0A50F492C795d",
   "network": "Studionet",

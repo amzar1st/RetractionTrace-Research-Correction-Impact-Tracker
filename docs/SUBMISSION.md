@@ -65,8 +65,8 @@ This package prepares the Project Explorer application; it does not claim the ap
 
 ## Immutable reviewed implementation
 
-- Implementation commit: [`e8bf7b817f8a7d21c11b481c58da4d078f9bed27`](https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker/commit/e8bf7b817f8a7d21c11b481c58da4d078f9bed27)
-- Exact deployed source: [retractiontrace.py](https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker/blob/e8bf7b817f8a7d21c11b481c58da4d078f9bed27/contracts/retractiontrace.py)
-- Test and evidence snapshot: [reviewed tree](https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker/tree/e8bf7b817f8a7d21c11b481c58da4d078f9bed27)
+- Implementation commit: [`f4146d3f9cf531f4772161bca73b761367ac8751`](https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker/commit/f4146d3f9cf531f4772161bca73b761367ac8751)
+- Exact deployed source: [retractiontrace.py](https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker/blob/f4146d3f9cf531f4772161bca73b761367ac8751/contracts/retractiontrace.py)
+- Test and evidence snapshot: [reviewed tree](https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker/tree/f4146d3f9cf531f4772161bca73b761367ac8751)
 
 Subsequent documentation/provenance commits do not change the verified contract source.
