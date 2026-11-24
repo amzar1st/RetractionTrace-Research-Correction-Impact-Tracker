@@ -4,12 +4,13 @@ import {readContract,getTransaction} from './chain.js';
 import {escapeHtml as e,trackTransaction} from './lifecycle.js';
 import {METHODS,prepareCall} from './inputs.js';
 import {verifyEffect} from './verify-effect.js';
+import {singleNoticeStatuses} from './aggregate.js';
 const $=s=>document.querySelector(s),short=s=>s?s.slice(0,8)+'…'+s.slice(-5):'Awaiting deployment';
 const link=(url,label,cls='')=>`<a href="${e(url)}" class="${cls}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 const titles={UNAFFECTED:'Unaffected',REVIEW_REQUIRED:'Review required',SUPPORT_WEAKENED:'Support weakened',INSUFFICIENT_EVIDENCE:'Insufficient evidence'};
 const badge=s=>`<span class="badge ${s?.toLowerCase()||'neutral'}">${e(titles[s]||'Not assessed')}</span>`;
 const svg=(name)=>{const paths={overview:'<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/>',claims:'<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',sources:'<path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1v15"/>',audit:'<path d="M3 12a9 9 0 1 0 3-7M3 3v5h5M12 7v5l3 2"/>',workspace:'<path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-16-2 20"/>',refresh:'<path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/>',external:'<path d="M14 3h7v7M21 3 10 14M10 3H3v18h18v-7"/>',shield:'<path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6l-9-4m-4 10 3 3 5-6"/>'};return `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.claims}</svg>`};
-let fixture,report=null,notice=null,assessment=null,statuses={},reportIds=[],view=location.hash.slice(1)||'overview',selected='C1',filter='ALL',search='',busy=false,error='',checked='',activeReport=C.demoReport,activeNotice=C.demoNotice,prepared=null,tracking=null;
+let fixture={notice:{notice_id:'',source_id:'',doi:'',excerpt:''},report:{title:'',version:'1.0',description:'',claims:[],sources:[]},links:[]},report=null,notice=null,assessment=null,statuses={},reportIds=[],view=location.hash.slice(1)||'overview',selected='C1',filter='ALL',search='',busy=false,error='',checked='',activeReport=C.demoReport,activeNotice=C.demoNotice,prepared=null,tracking=null;
 try{prepared=JSON.parse(sessionStorage.getItem('rt-prepared')||'null')}catch{}
 function toast(msg){$('#toast').textContent=msg;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),4000)}
 function shell(){
@@ -63,7 +64,12 @@ async function refresh(){if(busy)return;busy=true;error='';render();try{
  if(!report.notice_ids.includes(activeNotice))activeNotice=report.notice_ids.at(-1)||'';
  notice=activeNotice?await readContract('get_notice',[activeReport,activeNotice]):null;
  assessment=notice?.assessed?await readContract('get_assessment',[activeReport,activeNotice]):null;
- const ss=await Promise.all(report.claims.map(c=>readContract('get_claim_status',[activeReport,c.id])));statuses=Object.fromEntries(ss.map(s=>[s.claim_id,s]));checked=new Date().toLocaleString(undefined,{timeZoneName:'short'});
+ const derived=singleNoticeStatuses(report,notice,assessment);if(derived){statuses=derived}else{const ss=await Promise.all(report.claims.map(c=>readContract('get_claim_status',[activeReport,c.id])));statuses=Object.fromEntries(ss.map(s=>[s.claim_id,s]));}checked=new Date().toLocaleString(undefined,{timeZoneName:'short'});
  }catch(err){error=err.shortMessage||err.message}finally{busy=false;render()}}
 window.addEventListener('hashchange',()=>{tracking?.abort();view=location.hash.slice(1)||'overview';shell()});
-try{fixture=await fetch('/fixture.json').then(r=>{if(!r.ok)throw Error('Demo input fixture unavailable');return r.json()});shell();await refresh()}catch(err){$('#app').innerHTML=`<main class="empty"><h1>RetractionTrace</h1><p role="alert">${e(err.message)}</p><button onclick="location.reload()">Retry</button></main>`}
+async function initialize(){
+ shell();
+ try{fixture=await fetch('/fixture.json',{signal:AbortSignal.timeout(15000)}).then(r=>{if(!r.ok)throw Error('Demo input fixture unavailable');return r.json()});await refresh()}
+ catch(err){error='Startup could not complete: '+err.message;busy=false;render()}
+}
+initialize();

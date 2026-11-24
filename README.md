@@ -98,7 +98,7 @@ Do not redeploy to run tests. Deployment and live writes use Studio's built-in a
 
 ## Validation and evidence
 
-- **32 automated tests passed:** 17 Python contract logic tests and 15 JavaScript lifecycle/input/effect-verification tests.
+- **35 automated tests passed:** 17 Python contract logic tests and 18 JavaScript lifecycle/input/effect-verification tests.
 - **Live GenVM:** successful schema introspection and deployed-source equality.
 - **Live network:** deployment, report registration, citation linkage, publisher notice verification and semantic assessment finalized with successful execution in NORMAL mode.
 - **Negative network test:** an attempted second assessment finalized with an error, preserving the original immutable assessment. The frontend displayed failure.

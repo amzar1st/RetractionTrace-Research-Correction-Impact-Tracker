@@ -6,7 +6,7 @@
 - **Subtitle:** Research Correction Impact Tracker
 - **Suggested topic tags:** DeSci, research integrity, evidence provenance (choose the nearest available Explorer categories).
 - **Logo:** [512 × 512 PNG](../public/logo.png), under 2 MB.
-- **Application date:** 2026-11-23
+- **Application date:** 2026-11-24
 - **Website:** https://retractiontrace.wirymink515.chatgpt.site
 - **Repository:** https://github.com/amzar1st/RetractionTrace-Research-Correction-Impact-Tracker
 - **Network:** GenLayer Studionet, chain ID 61999
@@ -32,7 +32,7 @@ The key decision is semantic: does a changed passage bear on this particular cla
 
 The sample report contains five claims and three real PLOS ONE papers. Official correction DOI 10.1371/journal.pone.0199469 identifies errors in a supporting macro while explicitly preserving the article's analysis. Finalized outcomes: C1 REVIEW_REQUIRED; C2/C3/C4 UNAFFECTED; C5 INSUFFICIENT_EVIDENCE. C5 is intentionally unverifiable. These are illustrative report inputs, not clinical advice or endorsed research findings.
 
-All four write methods and deployment finalized successfully in NORMAL consensus mode. A duplicate assessment intentionally failed and preserved the original record. The frontend was tested against both successful and failed transactions. There are 32 passing automated tests, successful live GenVM schema validation, deployed-source equality, finalized-state checks and reviewer screenshots.
+All four write methods and deployment finalized successfully in NORMAL consensus mode. A duplicate assessment intentionally failed and preserved the original record. The frontend was tested against both successful and failed transactions. There are 35 passing automated tests, successful live GenVM schema validation, deployed-source equality, finalized-state checks and reviewer screenshots.
 
 ## Transaction evidence
 

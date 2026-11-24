@@ -1,10 +1,10 @@
 # Validation report
 
-Date: 23 November 2026. Network: GenLayer Studionet (61999).
+Date: 24 November 2026. Original live transactions executed on 23 November; deployed source and assessment rechecked on 24 November. Network: GenLayer Studionet (61999).
 
 ## Automated
 
-`npm test`: **32 passed** (17 Python, 15 JavaScript). `npm run build`: production build passed.
+`npm test`: **35 passed** (17 Python, 18 JavaScript). `npm run build`: production build passed.
 
 Contract tests exercise real contract methods behind explicit in-memory web/model/consensus doubles: bounds, unsupported DOI/host rejection, duplicate IDs, owner authorization, invalid links, publisher DOI/type/target checks, evidence sealing, immutable assessments, exact quote checks, independent validator disagreement, self-support exclusion, contributor-overlap rejection, independent-support status, conservative history aggregation and missing sources/passages.
 
@@ -38,3 +38,7 @@ Verified in the provided desktop Chrome browser:
 - No application runtime error was observed in these checks. Browser-extension metadata messages were outside the app.
 
 Responsive styles are included. Mobile-device browser testing was not performed. Provider/network outages and every real-world correction/retraction type are not exhaustively tested. No production security audit is claimed.
+
+## Startup and RPC efficiency follow-up
+
+The UI initializes before loading its fixture and no longer blocks module completion on network work. Fixture loading has a 15-second deadline. Rate-limit errors name the upstream limit and instruct the user to wait before retrying. For a single registered notice, the already fetched committed findings provide the complete aggregate, reducing a report refresh from nine RPC calls to four. Multiple-notice reports still use authoritative contract aggregation. Three additional tests cover no notice, pending notice, committed single-notice history, and multi-notice fallback.
